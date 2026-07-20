@@ -59,7 +59,10 @@ jobs:
           exit "$status"
 
       - name: Detener el monitor después del aviso
-        if: steps.monitor.outputs.notificado == 'true'
+        # Una prueba manual puede encontrar asientos y enviar un mensaje, pero
+        # no debe apagar la programación. Sólo se detiene tras un aviso surgido
+        # de una revisión automática.
+        if: steps.monitor.outputs.notificado == 'true' && github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow disable monitor-asientos.yml

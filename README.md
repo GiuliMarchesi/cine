@@ -61,9 +61,10 @@ Los valores de los secretos no aparecen en el repositorio ni en los logs.
 3. Presioná `Run workflow` para probarlo inmediatamente.
 4. Abrí la ejecución para comprobar los mensajes del bot.
 
-Después se ejecutará automáticamente cada diez minutos. Cuando encuentre todos
-los asientos y envíe el WhatsApp, el propio workflow se desactivará para no
-repetir el mensaje. Para una búsqueda nueva, editá `config.py` y después usá
+Después se ejecutará automáticamente cada diez minutos. Las pruebas iniciadas
+con `Run workflow` no desactivan la programación. Cuando una revisión automática
+encuentre todos los asientos y envíe el WhatsApp, el workflow se desactivará para
+no repetir el mensaje. Para una búsqueda nueva, editá `config.py` y después usá
 `Actions` → `Monitor de asientos` → `Enable workflow`.
 
 GitHub puede demorar ocasionalmente una ejecución programada. En repositorios
