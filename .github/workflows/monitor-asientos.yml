@@ -5,6 +5,12 @@ on:
     # Cada 10 minutos. GitHub interpreta los horarios en UTC.
     - cron: "*/10 * * * *"
   workflow_dispatch:
+    inputs:
+      automatico:
+        description: "Ejecución lanzada por un programador externo"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   actions: write
@@ -62,7 +68,9 @@ jobs:
         # Una prueba manual puede encontrar asientos y enviar un mensaje, pero
         # no debe apagar la programación. Sólo se detiene tras un aviso surgido
         # de una revisión automática.
-        if: steps.monitor.outputs.notificado == 'true' && github.event_name == 'schedule'
+        if: >-
+          steps.monitor.outputs.notificado == 'true' &&
+          (github.event_name == 'schedule' || inputs.automatico == true)
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow disable monitor-asientos.yml

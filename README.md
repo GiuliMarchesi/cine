@@ -71,6 +71,13 @@ GitHub puede demorar ocasionalmente una ejecución programada. En repositorios
 públicos también desactiva los workflows programados que pasan 60 días sin
 actividad en el repositorio.
 
+### Programador externo opcional
+
+Si el cron interno de GitHub no genera ejecuciones con regularidad, el workflow
+también acepta una ejecución externa mediante `workflow_dispatch`, usando el
+input booleano `automatico=true`. Una ejecución externa marcada así conserva la
+protección contra mensajes repetidos y desactiva el workflow después del aviso.
+
 ## Ejecución local opcional
 
 Instalación:
