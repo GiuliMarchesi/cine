@@ -17,10 +17,10 @@ CALLMEBOT_APIKEY = os.getenv("CALLMEBOT_APIKEY", "")
 FILM_URL = "https://entradas.todoshowcase.com/showcase/pelicula?filmid=5875&house_id=3250"
 CINE = "IMAX Theatre (Norcenter)"
 PELICULA = "La Odisea"
-FECHA = "2026-08-05"
-HORARIO_DESEADO = "22:35"
-FILA_DESEADA = "B"  # Se usa si ASIENTOS_DESEADOS está vacío
-ASIENTOS_DESEADOS = ["B-18", "B-19"]
+FECHA = "2026-08-06"
+HORARIO_DESEADO = "19:00"
+FILA_DESEADA = "J"  # Se usa si ASIENTOS_DESEADOS está vacío
+ASIENTOS_DESEADOS = ["J-18", "J-19"]
 TIPO_ENTRADA = "General"
 CANTIDAD_ENTRADAS = 2
 
