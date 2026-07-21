@@ -19,8 +19,8 @@ CINE = "IMAX Theatre (Norcenter)"
 PELICULA = "La Odisea"
 FECHA = "2026-08-06"
 HORARIO_DESEADO = "19:00"
-FILA_DESEADA = "J"  # Se usa si ASIENTOS_DESEADOS está vacío
-ASIENTOS_DESEADOS = ["J-18", "J-19"]
+FILA_DESEADA = "C"  # Se usa si ASIENTOS_DESEADOS está vacío
+ASIENTOS_DESEADOS = ["C-11", "C-12"]
 TIPO_ENTRADA = "General"
 CANTIDAD_ENTRADAS = 2
 
